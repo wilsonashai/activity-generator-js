@@ -1,8 +1,25 @@
 export const NIGHTLIFE = [
-    'a dive bar',
-    'winery',
-    'live music show',
-    'comedy show'
+    {
+        name: 'a dive bar',
+        action: 'check out',
+        primaryColor: '#2B264F',
+        secondaryColor: '#b38dfd'
+    }, {
+        name: 'winery',
+        action: 'sip wine at a',
+        primaryColor: '#754244',
+        secondaryColor: '#C1D3CC'
+    }, {
+        name: 'live music show',
+        action: 'groove at a',
+        primaryColor: '',
+        secondaryColor: ''
+    }, {
+        name: 'comedy show',
+        action: 'laugh at a',
+        primaryColor: '',
+        secondaryColor: ''
+    }
 ];
 
 export const EXERCISE = [
@@ -29,8 +46,23 @@ export const SIGHTSEEING = [
     'park'
 ];
 
-export const SPLURGE =[
-    'spa',
-    'shopping spree',
-    'casino'
+export const SPLURGE = [
+    {
+        name: 'spa',
+        action: 'relax and decompress at a',
+        primaryColor: '',
+        secondaryColor: ''
+    }, 
+    {
+        name: 'shopping spree',
+        action: 'treat yourself with a',
+        primaryColor: '',
+        secondaryColor: ''
+    },
+    {
+        name: 'casino',
+        action: 'try your luck at a',
+        primaryColor: '',
+        secondaryColor: ''
+    }
 ];
