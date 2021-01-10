@@ -1,13 +1,14 @@
 import React from 'react';
+import _ from 'lodash';
 import { NIGHTLIFE } from '../../data/activities';
 
 function RandomActivityGenerator() {
     const [activity, setActivity] = React.useState(undefined);
 
     function shuffleActivities() {
-        // 0 -> 10
-        // Math.floor(Math.random() * 11); 
-        let randomNumber = Math.floor(Math.random() * NIGHTLIFE.length);
+        let randomNumber = _.random(NIGHTLIFE.length-1);
+        // might only need 1 random number? roll 7, then just count down or up?
+        // add previously rolled numbers
         console.log(randomNumber);
         console.log(NIGHTLIFE[randomNumber]);
         setActivity(NIGHTLIFE[randomNumber]);
@@ -16,7 +17,7 @@ function RandomActivityGenerator() {
     return (
         <div>
             {activity ? (
-                <h3>{activity?.action} {activity?.name}</h3> 
+                <h3>{activity.action} {activity.name}</h3> 
             ) : (
                 <h3>Please roll the dice to display a random activity suggestion.</h3>
             )}
